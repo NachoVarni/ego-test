@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import modelos from './pages/modelos'
+import ficha from './pages/ficha'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Route exact path='/' component={modelos} />
+    <Route exact path='/ficha' component={ficha} />
+  </Router>,
   document.getElementById('root')
 );
 

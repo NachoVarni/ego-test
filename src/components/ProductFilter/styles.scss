@@ -1,0 +1,76 @@
+.filter-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 62px;
+  margin-bottom: 9px;
+  
+  .filter-list-left {
+    display: flex;
+    flex-direction: row;
+
+    .filter-by {
+      font-weight: 600;
+      padding: 8px 0px 9px 0px;
+      border-radius: 18px;
+      
+    }
+
+    .filter-all {
+      margin-left: 64px;
+      border-radius: 18px;
+      padding: 8px 18px 9px 19px;
+        
+      &:hover {
+        background-color: #f7f7f7;
+      }
+    }
+
+    .filter-cars {
+      margin-left: 63px;
+      padding: 8px 18px 9px 19px;
+      border-radius: 18px;
+      
+      &:hover {
+        background-color: #f7f7f7;
+      }
+    }
+    
+    .filter-pickups {
+      margin-left: 45px;
+      padding: 8px 18px 9px 19px;
+      border-radius: 18px;
+        
+      &:hover {
+        background-color: #f7f7f7;
+      }
+    }
+
+    .filter-suvs {
+      margin-left: 45px;
+      padding: 8px 18px 9px 19px;
+      border-radius: 18px;
+      
+      &:hover {
+        background-color: #f7f7f7;
+      }
+    }
+  }
+
+  .filter-list-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .ordenar {
+      margin-right: 7px;
+    }
+
+    // .arrow {
+    //   width: 3.2px;
+    //   height: 6px;
+    // }
+    
+  }
+}
