@@ -15,6 +15,7 @@ function Hero() {
   const [carsData, setCarsData] = useState(products)
   
   const filter = (button) => {
+    
     if (button === 'Todos') {
       setCarsData(products)
       return

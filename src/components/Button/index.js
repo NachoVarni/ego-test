@@ -7,7 +7,6 @@ function Button({filter}) {
   const fieldData = useContext(FieldContext)
   const {buttons} = fieldData
 
-  console.log(buttons)
   
   return(
     <div>
