@@ -1,6 +1,6 @@
 import './styles.scss'
 import cross from '../resources/fill-1.png'
-import React, {useState, useEffect, useRef} from 'react'
+import React from 'react'
 
 function SideNavbar({handleClick}) {
   

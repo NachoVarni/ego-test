@@ -8,29 +8,22 @@ function Models() {
   
   const [products, setProducts] = useState([])
   const [buttons, setButtons] = useState([])
-  const [showOrder, setShowOrder] = useState(false)
-  const [prices, setPrices] = useState([])
-  const [years, setYear] =  useState([])
+  // const [showOrder, setShowOrder] = useState(false)
   
-
-  function showOrderMenu() {
-    setShowOrder((prevState) => !prevState)
-    console.log('click')
-  }
+  // function showOrderMenu() {
+  //   setShowOrder((prevState) => !prevState)
+  //   console.log('click')
+  // }
   
   async function fetchData() {
     const data = await axios.get('https://challenge.agenciaego.tech/models')
-    setProducts(data.data)
+    
+    setProducts(() => data.data)
     const allSegments = ['Todos', ...new Set(data.data.map(car => car.segment))]
-    const allPrices = [...data.data.map((car) => car.price)]
-    const allYears = [...data.data.map((car) => car.year)]
-    setButtons(allSegments)
-    setPrices(allPrices)
-    setYear(allYears)
-    console.log(allPrices)
-    console.log(allYears)
+    setButtons(allSegments)  
   }
 
+  
   useEffect(() => {
     fetchData()
     
@@ -40,10 +33,7 @@ function Models() {
   const fieldData = {
     products,
     buttons,
-    showOrder,
-    showOrderMenu,
-    prices,
-    years
+    
   }
   
   return(

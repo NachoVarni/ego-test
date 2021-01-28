@@ -1,21 +1,25 @@
 import './styles.scss'
 import FieldContext from '../context/FieldContext'
-import React, { useContext, useState } from 'react'
+import FilteredCarsContext from '../context/FilteredCarsContext'
+import React, { useContext } from 'react'
 
-function Button({filter}) {
+function Button() {
   
   const fieldData = useContext(FieldContext)
+  const filterData = useContext(FilteredCarsContext)
   const {buttons} = fieldData
-
+  const {filter} = filterData
   
   return(
-    <div>
-      {buttons.map((cat, i) => {
+    <>
+      {buttons.map((cat, key) => {
         return(
-          <button onClick={() => filter(cat)} i={i}>{cat}</button>
+          <div key={key}>
+            <button onClick={() => filter(cat)}>{cat}</button>
+          </div>
         )
       })}
-    </div>
+    </>
   )
 }
 

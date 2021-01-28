@@ -1,20 +1,19 @@
 import Product from '../Product'
-import ProductFilter from '../ProductFilter'
 import './styles.scss'
-import FieldContext from '../context/FieldContext'
-import React, { useContext } from 'react'
+import React from 'react'
 
 function Products({carsData}) {
   
+  console.log(carsData)
   
   return(
     <>
       
       <div className='products'>
-        {carsData.map((product, key) => {
+        {carsData.map((product) => {
           return(
             <>  
-              <Product product={product} key={key} />
+              <Product product={product} key={product.id} />
             </>  
           )
         })}
